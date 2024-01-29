@@ -1,0 +1,90 @@
+INTRO TO DATA STRUCTURES CS-501-J
+Assignment 1
+
+1. Easy: Understanding Bubble Sort : Manually sort the array ` [22, 24, 8, 11, 3] ` using the bubble sort technique. write down each step of the process.
+Solution:  
+ Bubble Sort:
+Definition: Bubble Sort is a simple sorting algorithm technique used to sort the adjacent elements repeatedly if they are in wrong order (not in ascending order) and placing those elements in ascending order.
+Working: Bubble sort is a step-by-step process starting from the first element it compares the adjacent element and swaps the element if they are in wrong order. This process continues until the entire list is sorted. During each iteration the largest unsorted element gradually takes place at the end of the list.
+Example: consider the unsorted array [22,24,8,11,3]
+Step 1:  Given initial array [22,24,8,11,3]
+Bubble sort with 'n' elements require 'n-1' passes. Here there are 5 elements so 5-1 = 4 passes required to get the sorted algorithm.
+Pass 1: 
+Compare 22 and 24 (no swap required) [22,24,8,11,3]
+Compare 24 and 8 (swap required as 24 is greater than 8) [22,8,24,11,3]
+Compare 24 and 11(swap)[22,8,11,24,3]
+Compare 24 and 3(swap)[22,8,11,3,24]
+Now the array after first pass [22,8,11,3,24]
+Pass 2: 
+Compare 22 and 8(swap)[8,22,11,3,24]
+Compare 22 and 11(swap)[8,11,22,3,24]
+Compare 22 and 3(swap)[8,11,3,22,24]
+Compare 22 and 24(no swap)[8,11,3,22,24]
+After second pass the array is [8,11,3,22,24]
+Pass 3:
+Compare 8 and 11(no swap)[8,11,3,22,24]
+Compare 11 and 3(Swap)[8,3,11,22,24]
+Compare 22 and 24(no swap)[8,3,11,22,24]
+After third pass the sorted array is [8,3,11,22,24]
+Pass4:
+Compare 8 and 3(Swap)[3,8,11,22,24]
+ Compare 8 and 11 , 11 and 22 , 22 and 24(no swap)[3,8,11,22,24]
+The final sorted array after all 4 required passes is[3,8,11,22,24] 
+
+2. Intermediate: Trace the Bubble Sort Provided the unsorted array ` [5, 3, 1, 12] ` and trace the bubble sort algorithm step by step, showing the changes in the array after each pass.
+Solution :
+Given initial array is [5,3,1,12]
+Step 1: the size of the array is 4
+a[0] = 5, a[1] = 3, a[2] = 1,a[3] =12
+at initial the temporary value 't=a[0]'
+if a[0]>a[1] then swap a[0] with a[1] then assign it to 't'
+a[0]=5,a[1]=3 condition true then swap a[0]=3, a[1]=5 now 't=3'
+after first trace the array is [3,5,1,12]
+Step 2: a[0]=3,a[1]=5,a[2]=1,a[3]=12
+A[1]>a[2] condition true then swap and assign it to 't'
+Swap [3,1,5,12] t=1
+A[2]>a[3] condition fails no swap and 't' is past value
+Swap [1,3,5,12]
+The final sorted array is  [1,3,5,12]
+5. Advanced: Comparison with Other Sorting Algorithms
+Compare the bubble sort algorithm with quicksort and merge sort. Discuss the advantages and disadvantages of bubble sort in different scenarios. Additionally, analyse when it might be preferable to use other sorting algorithms.
+Solution :
+Bubble Sort: 
+Advantages:
+Bubble Sort has a simple implementation, making it easy to comprehend and create.
+In-Place Sorting: It requires no additional memory (in-place sorting), making it memory efficient.
+Adaptive: It works well with partially or nearly sorted arrays.
+Disadvantages:
+Bubble Sort's worst-case time complexity is O(n^2), making it inefficient for huge datasets.
+In fact, Bubble Sort is rarely used for sorting huge datasets due to its inefficiency, despite its ease of use.
+Preference scenarios:
+Bubble Sort's simplicity makes it ideal for tiny datasets or educational purposes.
+Nearly Sorted Data: It may work effectively with partially or nearly sorted data.
+Quicksort:
+ Advantages:
+Efficiency: Quicksort has an average time complexity of O(n log n), making it extremely efficient.
+Quicksort is an in-place sorting method that saves memory.
+Adaptability: It can be used as an adaptable algorithm, which means it works well with partially sorted data.
+Disadvantages:
+Quicksort's worst-case time complexity is O(n^2), which is uncommon given effective pivot selection algorithms.
+Stability: Quicksort is not a stable sorting algorithm.
+Scenario for Preference:
+Large Datasets: Quicksort is preferable for sorting large datasets due to its efficiency.
+Randomized Data: It performs well with randomized or diversified datasets.
+Mergesort:
+Advantages
+Mergesort is a stable sorting method that keeps equal elements in the same relative order.
+Predictable Performance: It has O(n log n) time complexity, which makes it predictable and efficient for huge datasets.
+External Sorting: Mergesort can be used to sort data that is too vast to fit in main memory.
+Disadvantages:
+Mergesort often uses more memory for merging, which can be a disadvantage in some cases.
+Complexity: It may be more difficult to implement than simpler algorithms like Bubble Sort.
+Scenario for Preference:
+huge Datasets with Limited Memory: Mergesort is useful when the dataset is huge and there is enough memory for the merging stage.
+External Sorting: It is appropriate for situations where sorting requires external storage.
+Analysis:
+Bubble Sort is simple and ideal for tiny datasets or nearly sorted data. Inefficient with huge datasets.
+Quicksort is efficient for huge datasets, especially when they are random or diversified, but it has a downside.
+Mergesort is stable and predictable, making it ideal for huge datasets, but it requires more resources.
+
+
